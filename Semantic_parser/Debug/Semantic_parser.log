@@ -1,0 +1,5 @@
+﻿  Source.cpp
+e:\projects\c++\4th year\compiler\scanner_praser\scanner\source.cpp(204): warning C4018: '<': signed/unsigned mismatch
+e:\projects\c++\4th year\compiler\scanner_praser\scanner\source.cpp(488): warning C4715: 'parser::get_token': not all control paths return a value
+  Semantic_parser.vcxproj -> E:\Projects\C++\4th Year\Compiler\Semantic_parser\Debug\Semantic_parser.exe
+  Semantic_parser.vcxproj -> E:\Projects\C++\4th Year\Compiler\Semantic_parser\Debug\Semantic_parser.pdb (Partial PDB)

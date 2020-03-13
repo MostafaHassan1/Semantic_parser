@@ -1,0 +1,19 @@
+begin
+integer x , y , x   
+boolean test,z
+proc s(integer h , y ; boolean a ) =
+if h > y
+then x := a  
+end if
+x := y ;
+begin 
+boolean u
+proc xx = if h 
+then x := y 
+end if 
+call s(x,y,x)
+end ;
+call s(x,y,test)
+end 
+
+$ 
