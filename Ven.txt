@@ -1,0 +1,43 @@
+<program> ::= <block> $
+<block> ::= begin <declaration-seq> <command-seq> end
+<declaration-seq> ::= <declartion> {<declarion>}
+<declaration> ::= <type> <name-list> | proc <name> <proc-tail>
+<proc-tail> ::= = <command>| (<parameter-list>) =<command>
+<type> ::= integer | boolean
+<parameter-list> ::= <type> <name-list> {; <type> <name-list> }
+<name-list> ::= <name> {, <name }
+<command-seq> ::= <command> {; <command> }
+<command> ::= <name> := <expr> | | read <name> | write <expr>
+ | if <expr> then <command-seq> [else <command-seq> ] end if
+ | while <expr> do <command-seq> end while
+ | call <name> [(<name-list>) ] | <block>
+<expr> ::= <expr1> {or <expr1> }
+<expr1> ::= <expr2> {and <expr2>}
+<expr2> ::= <expr3> | not <expr>
+<expr3> ::= <expr4> { <relation> <expr4> }
+<expr4> ::= <term> { <weak op>  <term>}
+<term> ::= <element> { <strong op> <elemnt> }
+<element> ::= <numeral> | <name> | ( <expr> ) | - <element>
+
+---------------------------------------------------------	-----
+program-program(block)
+block->block(dec+,com+)
+dec->Var(type,name+) | proc(name,proc_tail)
+proc_tail->proc_com(com) | proc_params(params+,com)
+Type->int | boolean
+params->params(type,name+)
+com->assign(name,expr) | Read(name) | Write(expr) 
+     | if_then(expr,com+,{com+}) //{com} means it might be empty
+     | While(expr,com+) | Call(name,{name+}) | call_block(block)
+expr-> op(expr+,expr) | Not(Expr)| number | Name | parn(expr) 
+Op-> or | and | relation | + | - | * | \  
+
+namelist_n(name_listn,name)
+params_lIst_n(params_list,type,name+)
+
+
+
+
+
+
+
